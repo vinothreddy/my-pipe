@@ -11,8 +11,7 @@ node('built-in')
    
     stage('Continuous Deployment') 
    
-	 {
-	
- sh label: '', script: 'scp  /home/ubuntu/.jenkins/workspace/multibranch_loans/webapp/target/webapp.war  ubuntu@172.31.39.219:/var/lib/tomcat9/webapps/qaenv.war'
+	 {	
+ sh label: '', script: 'scp  /home/ubuntu/.jenkins/workspace/multibranch_master/webapp/target/webapp.war  ubuntu@172.31.39.219:/var/lib/tomcat9/webapps/qaenv.war'
 	}
 }
